@@ -7,7 +7,7 @@ void systickDelayUS(int delay){
 
 	// Reload value is the number of clock cycles per milisec. 
 	// Recall that if each period has N processor clock cycles, RELOAD value should be N-1
-	SysTick->LOAD = CYCLES_PER_MS - 1 ;
+	SysTick->LOAD = CYCLES_PER_US - 1 ;
 
 	// Clear systick current value register
 	SysTick->VAL = 0;
